@@ -1,26 +1,20 @@
 .App {
   text-align: center;
   min-height: 100vh;
-  display:flex;
-  flex-direction: column;
+  background-color:'transparent';
 }
 
-.HeadImg{
-  position: absolute;
-  height:500px;
-  background: blue url('./assets/Head.png') no-repeat fixed center 100%;
-  background-size: 100vmin ;
 
-}
 .panel {
   height: 100vh;
   width: 100vw;
   text-align: center;
+  background: white url('./assets/Head.png') no-repeat fixed center 100%;
+  background-size: 100vmin ;
 }
 
 .panel span {
   position:relative;
-  display: block;
   overflow: visible;
   top: 30%;
   
@@ -29,6 +23,7 @@
 .panel.blue {
   background-color: transparent;
   font-size: 80px;
+  
 }
 
 .panel.turqoise {

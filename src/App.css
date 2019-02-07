@@ -2,8 +2,7 @@
   text-align: center;
   height: 100vh;
   background-color:'transparent';
-  background: white url('./assets/Head.png') no-repeat fixed center 100%;
-  background-size: 100vmin ;
+
 
 }
 
@@ -16,6 +15,8 @@
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  background: white url('./assets/Head.png') no-repeat fixed center 100%;
+  background-size: 100vmin ;
 }
 #pinContainer .panel {
   height: 100vh;
@@ -33,8 +34,7 @@
 
 .panel.blue {
   background-color:transparent;
-  background: white url('./assets/Head.png') no-repeat fixed center 100%;
-  background-size: 100vmin ;
+
 }
 
 .panel.turqoise {

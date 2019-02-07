@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background: white url('./assets/Head.png') no-repeat fixed bottom center;
+  background: white url('./assets/Head.png') no-repeat fixed center 100%;
   background-size: 100vmin ;
   min-height: 100vh;
 

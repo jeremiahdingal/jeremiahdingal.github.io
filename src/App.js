@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { Controller, Scene } from 'react-scrollmagic';
 import { Tween, Timeline,SplitLetters } from 'react-gsap';
-import { StickyContainer, Sticky } from 'react-sticky';
+import StickyBox from "react-sticky-box";
 
 
 
@@ -11,6 +11,8 @@ class App extends Component {
     return (
 
       <div className="App">
+          <StickyBox offsetTop={20} offsetBottom={20}><div className="panel"><span>wew</span></div></StickyBox>
+
         <div className="HeadImg">
           <Controller globalSceneOptions={{ triggerHook: 'onLeave' }}>
            <Scene      
@@ -28,6 +30,7 @@ class App extends Component {
                       }}
                       stagger={0.15}
                     >
+                    
                         <span >Hi.</span>
                     </Tween>
             </Scene>

@@ -2,13 +2,16 @@ import React, { Component } from 'react';
 import './App.css';
 import { Controller, Scene } from 'react-scrollmagic';
 import { Tween, Timeline,SplitLetters } from 'react-gsap';
+import { StickyContainer, Sticky } from 'react-sticky';
 
 
 
 class App extends Component {
   render() {
     return (
+
       <div className="App">
+        <div className="HeadImg">
           <Controller globalSceneOptions={{ triggerHook: 'onLeave' }}>
            <Scene      
                     pin={true}
@@ -53,6 +56,7 @@ class App extends Component {
               <div className="panel bordeaux"><span>4</span></div>
             </Scene>
           </Controller>
+        </div>
       </div>
     );
   }

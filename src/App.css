@@ -2,8 +2,6 @@
   text-align: center;
   background: white url('./assets/Head.png') no-repeat fixed bottom center;
   background-size: 100vmin ;
-  display:flex;
-  flex-direction: column;
   min-height: 100vh;
 
 }

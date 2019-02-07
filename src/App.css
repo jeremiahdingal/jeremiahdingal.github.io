@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  position:absolute;
   height: 100vh;
   background-color:'transparent';
   background: white url('./assets/Head.png') no-repeat fixed center 100%;
@@ -13,40 +12,40 @@
   
 
 }
-.panel {
+#pinContainer {
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
+}
+#pinContainer .panel {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
   text-align: center;
-  
 }
-
 .panel span {
-  position:relative;
-  overflow: visible;
-  top: 30%;
-  
-}
-
-.panel.blue {
-  background-color: blue;
+  position: relative;
+  display: block;
+  top: 50%;
   font-size: 80px;
   
 }
 
+.panel.blue {
+  background-color:transparent;
+  background: white url('./assets/Head.png') no-repeat fixed center 100%;
+  background-size: 100vmin ;
+}
+
 .panel.turqoise {
   background-color: transparent;
-  font-size: 50px;
-  line-height: 1.5em;
-  background: white url('./assets/Head.png') no-repeat fixed center bottom;
-  background-size: 100vmin ;
 }
 
 .panel.green {
   background-color: transparent;
-
 }
 
 .panel.bordeaux {
   background-color: transparent;
-
 }
+

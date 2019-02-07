@@ -1,11 +1,17 @@
 .App {
   text-align: center;
-  background: white url('./assets/Head.png') no-repeat fixed center 100%;
-  background-size: 100vmin ;
   min-height: 100vh;
-
+  display:flex;
+  flex-direction: column;
 }
 
+.HeadImg{
+  position: absolute;
+  height:500px;
+  background: blue url('./assets/Head.png') no-repeat fixed center 100%;
+  background-size: 100vmin ;
+
+}
 .panel {
   height: 100vh;
   width: 100vw;

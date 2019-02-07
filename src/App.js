@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Window, TitleBar, Text } from 'react-desktop/macOs';
 import { Controller, Scene } from 'react-scrollmagic';
-import { Tween, Timeline } from 'react-gsap';
+import { Tween, Timeline,SplitLetters } from 'react-gsap';
 
 
 
@@ -10,41 +9,50 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-              
-        </header>
-        <Controller>
-         <Scene duration={2000} triggerHook="onLeave" pin>
-         {(progress) => (
-            <Timeline totalProgress={progress} paused>
-            <Tween
-                from={{ x: '10%', top: '60%' }}
-                to={{ x: '60%', top: '10%' }}
-            >
-                  <div className="Win">
-                      <Window
-                      chrome
-                      height="300px"
-                      width="300px"
-                      padding="10px"
-                      >
-                        <TitleBar title="Portfolio" controls height="43"/>
-                        <Text>Hello World</Text>
-                      </Window>
-                      </div>
-
-            </Tween>  
-            </Timeline>
-
-          )}
-
-          </Scene>
-          <Scene duration={200} pin={{ pushFollowers: false }}>
-            <div className="sticky"><div>Pin Test</div></div>
-            
-          </Scene>
-        </Controller>
-        <div className="section" />
+          <Controller globalSceneOptions={{ triggerHook: 'onLeave' }}>
+           <Scene      
+                    pin={true}
+                    reverse={true}
+                    duration={1000}
+                  >
+                    <Tween 
+                      wrapper={
+                        <div className="panel blue" />
+                      }
+                      staggerFrom= {{
+                         opacity: 0,
+                        ease: 'Expo.easeInOut',
+                      }}
+                      stagger={0.15}
+                    >
+                        <span >Hi.</span>
+                    </Tween>
+            </Scene>
+            <Scene      
+                    pin={true}
+                    reverse={true}
+                    duration={500}
+                  >
+                    <Tween 
+                      wrapper={
+                        <div className="panel turqoise" />
+                      }
+                      staggerFrom= {{
+                         opacity: 0,
+                        ease: 'Expo.easeInOut',
+                      }}
+                      stagger={0.15}
+                    >
+                      <span className="text">I am Jeremiah, <br/>and this is my folio.</span>
+                    </Tween>
+            </Scene>
+            <Scene pin>
+              <div className="panel green"><span>3</span></div>
+            </Scene>
+            <Scene pin>
+              <div className="panel bordeaux"><span>4</span></div>
+            </Scene>
+          </Controller>
       </div>
     );
   }

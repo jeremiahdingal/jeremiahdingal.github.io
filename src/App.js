@@ -11,38 +11,53 @@ class App extends Component {
 
       <div className="App">
 
-        <div className="HeadImg">
-        <Controller>
-      <Scene
-        triggerHook="onLeave"
-        duration="300%"
-        pin
-      >
-        <Timeline
-          wrapper={<div id="pinContainer" />}
-        >
-          <section className="panel blue"><span>Panel</span></section>
-          <Tween
-            from={{ x: '-100%' }}
-            to={{ x: '0%' }}
-          >
-            <section className="panel turqoise"><span>Panel</span></section>
-          </Tween>
-          <Tween
-            from={{ x: '100%' }}
-            to={{ x: '0%' }}
-          >
-            <section className="panel green"><span>Panel</span></section>
-          </Tween>
-          <Tween
-            from={{ y: '-100%' }}
-            to={{ y: '0%' }}
-          >
-            <section className="panel bordeaux"><span>Panel</span></section>
-          </Tween>
-        </Timeline>
-      </Scene>
-    </Controller>
+        <div >
+          <Controller globalSceneOptions={{ triggerHook: 'onLeave' }}>
+           <Scene  
+                       
+                    pin={true}
+                    reverse={true}
+                    duration={1000}
+                  >
+                    <Tween 
+                      wrapper={
+                        <div className="panel blue" />
+                      }
+                      staggerFrom= {{
+                         opacity: 0,
+                        ease: 'Expo.easeInOut',
+                      }}
+                      stagger={0.15}
+                    >
+                    
+                        <span >Hi.</span>
+                    </Tween>
+            </Scene>
+            <Scene      
+                    pin={true}
+                    reverse={true}
+                    duration={1000}
+                  >
+                    <Tween 
+                      wrapper={
+                        <div className="panel turqoise" />
+                      }
+                      staggerFrom= {{
+                         opacity: 0,
+                        ease: 'Expo.easeInOut',
+                      }}
+                      stagger={0.15}
+                    >
+                      <span className="text">I am Jeremiah, <br/>and this is my folio.</span>
+                    </Tween>
+            </Scene>
+            <Scene duration={1000} pin>
+              <div className="panel green"><span>3</span></div>
+            </Scene>
+            <Scene duration={1000} pin>
+              <div className="panel bordeaux"><span>4</span></div>
+            </Scene>
+          </Controller>
         </div>
       </div>
     );

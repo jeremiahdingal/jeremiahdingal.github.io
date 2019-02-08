@@ -48,11 +48,26 @@ class App extends Component {
                       }}
                       stagger={0.15}
                     >
-                      <span className="text">I am Jeremiah, <br/>and this is my folio.</span>
+                      <span className="text">I am Jeremiah,</span>
                     </Tween>
+                    
             </Scene>
-            <Scene duration={1000} pin>
-              <div className="panel green"><span>3</span></div>
+            <Scene  pin={true}
+                    reverse={true}
+                    duration={1000}
+                  >
+                    <Tween 
+                      wrapper={
+                        <div className="panel green" />
+                      }
+                      staggerFrom= {{
+                         opacity: 0,
+                        ease: 'Expo.easeInOut',
+                      }}
+                      stagger={0.15}
+                    >
+                      <span className="text">and this is my portfolio.</span>
+                    </Tween>
             </Scene>
             <Scene duration={1000} pin>
               <div className="panel bordeaux"><span>4</span></div>

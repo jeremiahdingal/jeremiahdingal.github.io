@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
 .App:before {
   text-align: center;
   min-height: 100vh;
@@ -11,47 +13,41 @@
   height: 100%;
   z-index: -10;
   background: url('./assets/Head.png') no-repeat center bottom;
-  background-size: 100vmin ;
+  background-size: 120vmin ;
 }
 
-
-.HeadImg{
-  height:100vh;
-  
-
-}
-#pinContainer {
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
- /** background: white url('./assets/Head.png') no-repeat fixed center 100%;
-  background-size: 100vmin ;*/
-}
-#pinContainer .panel {
-  height: 100vh;
-  width: 100vw;
-  position: absolute;
+.panel{
+  display:flex;
+  margin: 50px;
+  justify-content: center;
   text-align: center;
 }
+
 .panel span {
-  position: relative;
-  display: block;
   top: 50%;
   font-size: 80px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  
   
 }
 
 .panel.blue {
   background-color:transparent;
+  margin-top:30vh;
 
 }
 
 .panel.turqoise {
   background-color: transparent;
+  margin-top:30vh;
+
 }
 
 .panel.green {
   background-color: transparent;
+  margin-top:30vh;
+  font-size: 60px;
 }
 
 .panel.bordeaux {

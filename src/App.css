@@ -21,13 +21,14 @@
   margin: 50px;
   justify-content: center;
   text-align: center;
+  font-size: 80px;
+
 }
 
 .panel span {
   top: 50%;
-  font-size: 80px;
   font-family: 'Lato', sans-serif;
-  font-weight: 100;
+  font-weight: 300;
   
   
 }
@@ -41,13 +42,14 @@
 .panel.turqoise {
   background-color: transparent;
   margin-top:30vh;
+  font-size: 15vmin;
 
 }
 
 .panel.green {
   background-color: transparent;
   margin-top:30vh;
-  font-size: 60px;
+  font-size: 12vmin;
 }
 
 .panel.bordeaux {

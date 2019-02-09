@@ -4,10 +4,12 @@
   "private": true,
   "homepage": "https://jeremiahdingal.github.io/",
   "dependencies": {
+    "@material-ui/core": "^3.9.2",
     "react": "^16.7.0",
     "react-desktop": "^0.3.8",
     "react-dom": "^16.7.0",
     "react-gsap": "^1.2.0",
+    "react-ionicons": "^3.0.1",
     "react-scripts": "2.1.3",
     "react-scrollmagic": "^2.1.0"
   },

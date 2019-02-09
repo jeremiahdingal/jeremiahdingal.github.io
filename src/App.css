@@ -51,6 +51,11 @@
   margin-top:5vh;
 }
 
+.panel.skills {
+  background-color: transparent;
+  padding-top:5vh;
+}
+
 .panel.bordeaux {
   background-color: transparent;
 }

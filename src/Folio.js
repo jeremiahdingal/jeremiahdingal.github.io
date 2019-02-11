@@ -56,7 +56,7 @@ etcToggleModal = () => {
       return (
         <div className="container">
           <div id="title">
-            Works
+            Works (tap for more details)
           </div>
           <div id ="cards">
             <Container>

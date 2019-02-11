@@ -1,125 +1,125 @@
 import React, { Component } from 'react';
 import './Folio.css';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-import CardMedia from '@material-ui/core/CardMedia';
+
 import plush from './assets/Plush.png';
 import gala from './assets/galamockup.jpeg';
+import dw from './assets/DW.jpg'
+import duracrete from './assets/duracrete.png'
 
-import Grid from '@material-ui/core/Grid';
+import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+
+import PlushModal from './PlushModal'
+import GalaModal from './GalaModal'
+import DWModal from './DWModal'
+import EtcModal from './EtcModal'
+
 
 
 class Folio extends Component {
+  constructor(...args) {
+    super(...args);
+  this.state = { 
+    plushModalShow: false,
+    galaModalShow: false,
+    dwModalShow: false,
+    etcModalShow: false,
 
-  state = {
-    raised:false
-  }
-  toggleRaised = () => this.setState({raised:!this.state.raised});
+   };
+
+}
+plushToggleModal = () => {
+  this.setState({
+    plushModalShow: !this.state.plushModalShow
+  });
+}
+galaToggleModal = () => {
+  this.setState({
+    galaModalShow: !this.state.galaModalShow
+  });
+}
+dwToggleModal = () => {
+  this.setState({
+    dwModalShow: !this.state.dwModalShow
+  });
+}
+etcToggleModal = () => {
+  this.setState({
+    etcModalShow: !this.state.etcModalShow
+  });
+}
 
     render() {
+
       return (
-        <Grid container spacing={24} justify="center" >
-          <Grid item md={3} >
-              <Card className="cardfolio"
-              onMouseOver={this.toggleRaised} 
-              onMouseOut={this.toggleRaised} 
-              raised={this.state.raised}>
-              
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                alt="Plush Project"
-                className="media"
-                image={plush}
-                title="Contemplative Reptile"
-              />
-              <CardContent>
-               <Typography gutterBottom variant="subtitle1"  >
-                Plush
-               </Typography>
-               
-              </CardContent>
-            </CardActionArea>
+        <div className="container">
+          <div id="title">
+            Works
+          </div>
+          <div id ="cards">
+            <Container>
+              <Row>
+                <Col xs={6} lg={3}>  
+                    <Card id="cardfolio" onClick={this.plushToggleModal}>
+                      <Card.Img variant="top" src={plush} className="media"/>
+                      <Card.Body>
+                        <Card.Text id="labels">Plush</Card.Text>
+                        <Card.Text>
+                        <PlushModal
+                            show={this.state.plushModalShow}
+                            onHide={this.plushToggleModal}
+                          />
             
-          </Card>
-         </Grid>
-         <Grid item md={3} >
-              <Card className="cardfolio"
-              onMouseOver={this.toggleRaised} 
-              onMouseOut={this.toggleRaised} 
-              raised={this.state.raised}>
-              
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                alt="Plush Project"
-                className="media"
-                image={gala}
-                title="Contemplative Reptile"
-              />
-              <CardContent>
-               <Typography gutterBottom variant="subtitle1"  >
-                Gala
-               </Typography>
-              
-              </CardContent>
-            </CardActionArea>
-            
-            </Card>
-          </Grid>
-          <Grid item md={3} >
-              <Card className="cardfolio"
-              onMouseOver={this.toggleRaised} 
-              onMouseOut={this.toggleRaised} 
-              raised={this.state.raised}>
-              
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                alt="Plush Project"
-                className="media"
-                image={gala}
-                title="Contemplative Reptile"
-              />
-              <CardContent>
-               <Typography gutterBottom variant="subtitle1"  >
-                Gala
-               </Typography>
-              
-              </CardContent>
-            </CardActionArea>
-            
-            </Card>
-          </Grid>
-          <Grid item md={3} >
-              <Card className="cardfolio"
-              onMouseOver={this.toggleRaised} 
-              onMouseOut={this.toggleRaised} 
-              raised={this.state.raised}>
-              
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                alt="Plush Project"
-                className="media"
-                image={gala}
-                title="Contemplative Reptile"
-              />
-              <CardContent>
-               <Typography gutterBottom variant="subtitle1"  >
-                Gala
-               </Typography>
-              
-              </CardContent>
-            </CardActionArea>
-            
-            </Card>
-          </Grid>
-        </Grid>
+                          </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </Col>
+                <Col xs={6} lg={3}> 
+                  <Card id="cardfolio" onClick={this.galaToggleModal}>
+                      <Card.Img variant="top" src={gala} className="media" />
+                      <Card.Body>
+                        <Card.Text id="labels">Gala</Card.Text>
+                        <Card.Text>
+                        <GalaModal
+                            show={this.state.galaModalShow}
+                            onHide={this.galaToggleModal}
+                          />
+          
+                      </Card.Text>
+                    </Card.Body>
+                  </Card>
+                </Col>
+                <Col xs={6} lg={3}>
+                  <Card id="cardfolio" onClick={this.dwToggleModal}>
+                    <Card.Img variant="top" src={dw} className="media"/>
+                    <Card.Body>
+                      <Card.Text id="labels">DW</Card.Text>
+                      <DWModal
+                            show={this.state.dwModalShow}
+                            onHide={this.dwToggleModal}
+                          />
+                    </Card.Body>
+                  </Card>
+                </Col>
+                <Col xs={6} lg={3}>
+                  <Card id="cardfolio" onClick={this.etcToggleModal}>
+                    <Card.Img variant="top" src={duracrete} className="media"/>
+                    <Card.Body>
+                      <Card.Text id="labels">Etc</Card.Text>
+                      <EtcModal
+                            show={this.state.etcModalShow}
+                            onHide={this.etcToggleModal}
+                          />
+                    </Card.Body>
+                  </Card>
+                </Col>
+                
+             </Row>
+            </Container>
+          </div>
+        </div>
       );
     }
   }

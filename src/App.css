@@ -55,9 +55,19 @@
 .panel.skills {
   background-color: transparent;
 }
+
+.panel.social {
+  background-color: transparent;
+  padding-top:5vh;
+  font-size: 10vmin;
+
+}
+
 .panel.folio {
   background-color: transparent;
   padding-top:-5vh;
+  margin-right:10px;
+  margin-left:10px;
 }
 
 .panel.bordeaux {

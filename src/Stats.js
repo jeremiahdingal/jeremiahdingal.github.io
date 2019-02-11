@@ -22,7 +22,7 @@ class Stats extends Component {
         <Typography gutterBottom variant="h4" component="h1" align="left">
               Stats
             </Typography>
-              <img className="bavatar" src={avatar}/>
+              <img className="bavatar" src={avatar} alt="Jeremiah Dingal"/>
             
             <Grid container spacing={24} justify="center" >
               <Grid item xs={3} direction="row">

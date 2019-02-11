@@ -5,13 +5,17 @@
   "homepage": "https://jeremiahdingal.github.io/",
   "dependencies": {
     "@material-ui/core": "^3.9.2",
+    "bootstrap": "^4.2.1",
     "react": "^16.7.0",
+    "react-bootstrap": "^1.0.0-beta.5",
     "react-desktop": "^0.3.8",
     "react-dom": "^16.7.0",
     "react-gsap": "^1.2.0",
+    "react-images": "^0.5.19",
     "react-ionicons": "^3.0.1",
     "react-scripts": "2.1.3",
     "react-scrollmagic": "^2.1.0",
+    "react-social-icons": "^4.1.0",
     "react-star-rating-component": "^1.4.1"
   },
   "scripts": {

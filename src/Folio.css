@@ -1,13 +1,48 @@
 
+.container{
+  display:flex;
+  flex-direction: column;
+  
+}
+#labels{
+  font-size: 3vmin;
+}
+#cards{
+  display:flex;
+  flex-basis: row;
+  justify-content: space-between;
+}
+#title {
+  font-size: 5vmin;
+  text-align: left;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+}
+#cardfolio {
+  max-width: 150px;
+  min-width: 120px;
+  width: 25vw;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+  border: 0px; 
+  transition: transform  .35s ease-in-out, box-shadow .35s ease-in-out;
+  margin-top: 10px;
+  max-height:37vmin;
+  min-height: 220px;
+}
 
 
-.cardfolio {
-  max-width: 110px;
-  height: 200px;
+
+#cardfolio:hover {
+  box-shadow: 0px 20px 30px  rgba(0,0,0,0.2);
+  cursor: pointer;
+  transform:translateY(-10px);
 }
 
 .media {
   height: auto;
+  max-height: 180px;
+  object-fit: cover;
+  min-height: 170px;
 }
 
 

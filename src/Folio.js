@@ -4,7 +4,7 @@ import './Folio.css';
 import plush from './assets/Plush.png';
 import gala from './assets/galamockup.jpeg';
 import dw from './assets/DW.jpg'
-import duracrete from './assets/duracrete.png'
+import parcpage from './assets/parcpage2.png'
 
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container'
@@ -105,7 +105,7 @@ etcToggleModal = () => {
                 </Col>
                 <Col xs={6} lg={3}>
                   <Card id="cardfolio" onClick={this.etcToggleModal}>
-                    <Card.Img variant="top" src={duracrete} className="media"/>
+                    <Card.Img variant="top" src={parcpage} className="media"/>
                     <Card.Body>
                       <Card.Text id="labels">Etc</Card.Text>
                       <EtcModal

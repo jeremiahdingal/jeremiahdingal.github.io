@@ -60,7 +60,7 @@ etcToggleModal = () => {
           </div>
           <div id ="cards">
             <Container>
-              <Row>
+              <Row>{/*
                 <Col xs={6} lg={3}>  
                     <Card id="cardfolio" onClick={this.plushToggleModal}>
                       <Card.Img variant="top" src={plush} className="media"/>
@@ -75,7 +75,7 @@ etcToggleModal = () => {
                           </Card.Text>
                         </Card.Body>
                     </Card>
-                </Col>
+              </Col>*/}
                 <Col xs={6} lg={3}> 
                   <Card id="cardfolio" onClick={this.galaToggleModal}>
                       <Card.Img variant="top" src={gala} className="media" />

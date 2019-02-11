@@ -13,6 +13,8 @@ import MdCard from 'react-ionicons/lib/MdCard';
 import MdSchool from 'react-ionicons/lib/MdSchool';
 
 class Stats extends Component {
+
+  
     render() {
       return (
         <Card className="card">
@@ -32,7 +34,7 @@ class Stats extends Component {
               <Grid item xs={9} direction="row">
                 <div className="details">
                 <Typography component="p" align="left" >
-                  Jeremiah Japhet Dingal
+                  Jeremiah Japhet Dingal (Jei)
                 </Typography>
               </div>
               </Grid>

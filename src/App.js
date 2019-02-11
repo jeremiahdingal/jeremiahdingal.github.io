@@ -4,6 +4,7 @@ import { Controller, Scene } from 'react-scrollmagic';
 import { Tween, Timeline } from 'react-gsap';
 import Stats from './Stats'
 import Skills from './Skills'
+import Folio from './Folio'
 
 
 
@@ -38,7 +39,7 @@ class App extends Component {
             </Scene>
             <Scene      
                     pin={true}
-                    duration={1000}
+                    duration={500}
                     triggerHook={'onLeave'}
 
                   >
@@ -77,7 +78,7 @@ class App extends Component {
                     </Tween>
             </Scene>
             <Scene
-                duration={1000}
+                duration={2000}
                 pin={true}
                 triggerHook={'onLeave'}
               >
@@ -111,14 +112,81 @@ class App extends Component {
                   )}
             </Scene>
 
-            <Scene duration={1000} pin={true} triggerHook={'onLeave'}>
-              <div className="panel skills">
-                <Skills/>
-              </div>
+            <Scene
+                duration={2000}
+                pin={true}
+                triggerHook={'onLeave'}
+              >
+                  {(progress) => (
+                    <div>
+                        
+                        <Timeline totalProgress={progress} paused
+                          target={
+                            <div className="panel skills">
+                                <Skills/>
+                                
+                            
+                            </div>
+                          }
+                        >
+                          <Tween
+                            staggerFrom={{ 
+                              height:'10%',
+                              x: '-20%',
+                              opacity:'0',
+                              ease: 'Back.easeOut',
+                            }}
+                            staggerTo={{ x: '0%', opacity:'1',height:'100%'}}
+                            stagger={0.15}
+
+                          />
+                          <Tween
+                            to={{ x: '20%' ,opacity:'0'}}
+                          />
+                      </Timeline>
+                    </div>
+                  )}
+            </Scene>
+            <Scene
+                duration={2000}
+                pin={true}
+                triggerHook={'onLeave'}
+              >
+                  {(progress) => (
+                    <div>
+                        
+                        <Timeline totalProgress={progress} paused
+                          target={
+                            <div className="panel folio">     
+
+                                <Folio/>
+                                
+                            
+                            </div>
+                          }
+                        >
+                          <Tween
+                            staggerFrom={{ 
+                              height:'10%',
+                              y: '-20%',
+                              opacity:'0',
+                              ease: 'Back.easeOut',
+                            }}
+                            staggerTo={{ y: '0%', opacity:'1',height:'100%'}}
+                            stagger={0.15}
+
+                          />
+                          <Tween
+                            to={{ y: '20%' ,opacity:'0'}}
+                          />
+                      </Timeline>
+                    </div>
+                  )}
             </Scene>
             <Scene duration={1000} pin>
               <div className="panel bordeaux">
-                
+                This website was created using React.<br/>
+                All Rights Reserved. 2019
               </div>
             </Scene>
           </Controller>

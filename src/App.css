@@ -14,6 +14,8 @@
   z-index: -10;
   background: url('./assets/Head.png') no-repeat center bottom;
   background-size: 120vmin ;
+  
+  
 }
 
 .panel{
@@ -22,7 +24,6 @@
   justify-content: center;
   text-align: center;
   font-size: 80px;
-
 }
 
 .panel span {
@@ -35,13 +36,13 @@
 
 .panel.blue {
   background-color:transparent;
-  margin-top:30vh;
+  margin-top:40vh;
 
 }
 
 .panel.turqoise {
   background-color: transparent;
-  margin-top:30vh;
+  margin-top:40vh;
   font-size: 10vmin;
 
 }
@@ -53,11 +54,19 @@
 
 .panel.skills {
   background-color: transparent;
-  padding-top:5vh;
+}
+.panel.folio {
+  background-color: transparent;
+  padding-top:-5vh;
 }
 
 .panel.bordeaux {
   background-color: transparent;
+  font-size: 10px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+
+
 }
 
 
@@ -72,6 +81,7 @@
 .card {
   max-width: 345px;
   min-width: 300px;
+  
 }
 
 .media {
